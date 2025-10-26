@@ -5,46 +5,43 @@ import roles.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Singleton Mediator Pattern Implementation
- * Coordinates all smart home devices and manages role assignments
- * 
- * Design Patterns Used:
- * 1. SINGLETON: Only one instance of the controller exists
- * 2. MEDIATOR: Coordinates communication and role assignments between devices
- */
 public class SmartHomeController {
     
-    // ===== SINGLETON PATTERN =====
-    private static SmartHomeController instance; // Single instance
+    /* ======== SINGLETON PATTERN ========
+    - Only ONE instance will ever exist
+    - static' means it belongs to the class, not individual objects
+    - 'private' prevents external access 
+    */ 
+    private static SmartHomeController instance; 
     
     // ===== MEDIATOR PATTERN =====
     private final List<ISmartDevice> devices = new ArrayList<>();
     
     /**
      * Private constructor prevents external instantiation (Singleton pattern)
+     * Only way to get instance is through getInstance()
      */
     private SmartHomeController() {
         System.out.println("✓ SmartHomeController initialized (Singleton)\n");
     }
     
     /**
-     * Get the single instance of SmartHomeController (Singleton pattern)
-     * Thread-safe implementation
-     * @return The singleton instance
+     * Public method provides controlled access
+          ↑ Synchronized ensures thread-safety
+          ↑ Lazy initialization - creates when needed
+          ↑ Always returns THE SAME instanceGet the single instance of SmartHomeController (Singleton pattern)
      */
     public static synchronized SmartHomeController getInstance() {
         if (instance == null) {
-            instance = new SmartHomeController();
+            instance = new SmartHomeController();// Create ONLY if doesn't exist
         }
-        return instance;
+        return instance;// Return the ONE instance
     }
     
     // ===== DEVICE REGISTRATION (Mediator functionality) =====
     
     /**
      * Register a device with the smart home system
-     * @param device Device to register
      */
     public void registerDevice(ISmartDevice device) {
         if (!devices.contains(device)) {
@@ -75,6 +72,7 @@ public class SmartHomeController {
         System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
         System.out.println("🔒 ACTIVATING SECURITY MODE");
         System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+         // Mediator loops through ALL devices
         for (ISmartDevice device : devices) {
             device.addRole(new SecurityModeRole());
         }

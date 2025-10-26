@@ -2,22 +2,6 @@ import devices.*;
 import roles.*;
 import mediator.*;
 
-/**
- * Main demonstration class for Smart Home System
- * 
- * Demonstrates the implementation of:
- * 1. SINGLETON PATTERN - SmartHomeController has only one instance
- * 2. MEDIATOR PATTERN - Controller coordinates all device interactions
- * 3. ROLE PATTERN - Devices can dynamically gain/lose roles
- * 
- * Homework Requirements Demonstrated:
- * ✓ Entities used through common interface (ISmartDevice)
- * ✓ Check if entity has additional roles (hasRole method)
- * ✓ Use entity through role interface (getRole().execute())
- * ✓ Dynamic role gain/loss (addRole/removeRole)
- * ✓ Easily expandable roles (just add new IDeviceRole implementations)
- * ✓ Multiple simultaneous roles per device
- */
 public class Main {
     public static void main(String[] args) {
         printHeader();
@@ -213,7 +197,6 @@ public class Main {
         System.out.println("║  Patterns Implemented:                                         ║");
         System.out.println("║  • SINGLETON PATTERN (SmartHomeController)                     ║");
         System.out.println("║  • MEDIATOR PATTERN (Device coordination)                      ║");
-        System.out.println("║  • ROLE PATTERN (Dynamic behavior assignment)                  ║");
         System.out.println("║                                                                ║");
         System.out.println("╚════════════════════════════════════════════════════════════════╝\n");
     }
@@ -231,24 +214,7 @@ public class Main {
         System.out.println("\n✅ DESIGN PATTERNS DEMONSTRATED:");
         System.out.println("   • Singleton Pattern: Single SmartHomeController instance");
         System.out.println("   • Mediator Pattern: Controller coordinates all device interactions");
-        System.out.println("   • Role Pattern: Dynamic behavior assignment to devices");
-        
-        System.out.println("\n✅ HOMEWORK REQUIREMENTS SATISFIED:");
-        System.out.println("   ✓ Common Interface Usage: All devices through ISmartDevice");
-        System.out.println("   ✓ Role Checking: hasRole() method demonstrated");
-        System.out.println("   ✓ Role Interface Usage: getRole().execute() demonstrated");
-        System.out.println("   ✓ Dynamic Role Gain/Loss: addRole() and removeRole() shown");
-        System.out.println("   ✓ Multiple Simultaneous Roles: Devices have 3+ roles at once");
-        System.out.println("   ✓ Easy Expandability: New roles added without code changes");
-        
-        System.out.println("\n✅ OBJECT-ORIENTED PRINCIPLES:");
-        System.out.println("   • Encapsulation: Role logic encapsulated in role classes");
-        System.out.println("   • Polymorphism: Devices used through common interface");
-        System.out.println("   • Composition: Devices contain roles (not inheritance)");
-        System.out.println("   • Single Responsibility: Each class has one clear purpose");
-        
-        System.out.println("\n🎉 DEMONSTRATION COMPLETE!");
-        System.out.println("   All design patterns and requirements successfully demonstrated.\n");
+
     }
     
     private static void pause() {

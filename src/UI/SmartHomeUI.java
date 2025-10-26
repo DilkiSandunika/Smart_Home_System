@@ -8,10 +8,6 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.List;
 
-/**
- * Graphical User Interface for Smart Home System
- * Enhanced with toggle states and better UX design
- */
 public class SmartHomeUI extends JFrame {
     private SmartHomeController controller;
     private SmartLight livingRoomLight;
