@@ -18,11 +18,6 @@ This project implements a smart home control system where devices can dynamicall
 - **Purpose**: Coordinates interactions between smart devices
 - **Benefits**: Loose coupling, easy to add new devices, centralized coordination logic
 
-### 3. **Role Pattern**
-- **Classes**: `IDeviceRole`, `SecurityModeRole`, `VacationModeRole`, etc.
-- **Purpose**: Allows devices to dynamically acquire context-specific behaviors
-- **Benefits**: Flexible behaviors, runtime modification, no class explosion
-
 ## 🏠 Smart Home Devices
 
 - **💡 Smart Light**: Brightness control, color changing, status indicators
@@ -107,18 +102,6 @@ java -cp bin SmartHomeUI
 4. **View Roles**: Click "Roles" button on any device to see its active roles
 5. **Monitor Log**: Watch the system log at the bottom for all activities
 
-## 📊 UML Diagrams
-
-### Class Diagram
-```
-[See documentation for detailed UML diagrams]
-```
-
-### Sequence Diagrams
-```
-[See documentation for interaction flows]
-```
-
 ## 📝 Key Learning Outcomes
 
 - ✅ Understanding when and how to apply design patterns
@@ -136,12 +119,6 @@ Vilnius Tech University
 ## 📄 License
 
 This project is created for educational purposes.
-
-## 🙏 Acknowledgments
-
-- Gang of Four Design Patterns book
-- Vilnius Tech University faculty
-- Course instructor: Saulius Valentinavičius
 
 ---
 
