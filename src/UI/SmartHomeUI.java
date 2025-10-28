@@ -104,7 +104,7 @@ public class SmartHomeUI extends JFrame {
         titleLabel.setFont(new Font("Arial", Font.BOLD, 28));
         titleLabel.setForeground(Color.WHITE);
         
-        JLabel subtitleLabel = new JLabel("Design Patterns: Singleton + Mediator + Roles", JLabel.CENTER);
+        JLabel subtitleLabel = new JLabel("Design Patterns: Singleton + Mediator", JLabel.CENTER);
         subtitleLabel.setFont(new Font("Arial", Font.PLAIN, 16));
         subtitleLabel.setForeground(new Color(189, 195, 199));
         
